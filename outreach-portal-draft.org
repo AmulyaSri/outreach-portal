@@ -1,0 +1,92 @@
+#+Title: Outreach portal
+#+Date: 2015-03-31
+
+* Introduction
+Outreach portal is the single point of contact for feedback, resource
+management related to outreach activities.
+* Assumptions
+
+DBA creates web admin credentials in the database.
+Web admin creates the users, updates and deletes the users from the system.
+
+* Requirements
+** Functional Requirements
+*** Users of the System
+
+The various users of the system are:
+
+    + Participating Institute (PI)
+    + Nodal Centre (NC)
+    + Engineering College (EC)
+    + Partner (PT)
+    + VLEAD (VL)
+    + Students (SD)
+    + Faculty (FA)
+    + Outreach Team (OT)
+    + Lab developer(LD)
+
+*** Functionality
+    + FEEDBACK 
+    + BUGS 
+    + PLANNING 
+    + RESOURCE MANAGEMENT
+    + ANALYTICS AND REPORTS
+
+*** Workflows for the functionality
+**** FEEDBACK
+
+  Categorization  of Feedback
+
+   ++ Feedback about labs   => Users raise the feedback and it is sent to lab developer.
+   ++ About Workshop        => Users raise the feedback and it is sent to Outreach team.
+   ++ Development of labs
+
+An automatic mail is sent to user acknowledging the feedback and mail
+after the resolution.
+
+   ++ Lab content errors       => Any user can raise the bug and it goes to Lab developer.
+   ++ Non lab content errors   => Any user can raise the bug and it is sent to VLEAD.
+   
+****  PLANNING AND RESOURCE MANAGEMENT :
+  + Outreach calender displayed to users. 
+  + Checklist for workshops displayed. 
+  + Information about availability of Prof. for the workshops.
+  + Marketing material available at each institute
+
+** Non-functional Requirements
+The DBA can backup and restore the database at any point of time.
+* Planned releases
+** Release 0.1
+
+ This release will have a database to which a predefined set of users
+ can login and then logout.  The system allows its database to be
+ backed up and also restored.
+
+** Release 0.2
+
+This release will have a facility to upload documents, search
+documents, and tag documents.
+
+** Release 1.0
+
+...
+
+* Design
+
+...
+* Test Cases
+
+...
+* Toy Model 
+
+This toy model is a small web application which can be used to upload
+various documents. User can specify his required document type. We
+will develop this using NO SQL database and Python.
+
+The toy model is used to upload documents like flyers, banners required for the Workshop.
+
+The Second functionality which we want to implement is, to collect the
+post workshop material like, attendance sheets, workshop report and feedback form.
+
+Database schema have to be decided yet.
+
