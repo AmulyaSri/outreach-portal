@@ -60,9 +60,19 @@ The DBA can backup and restore the database at any point of time.
 
  This release will have a database to which a predefined set of users
  can login and then logout.  The system allows its database to be
- backed up and also restored.
+ backed up and also restored.  
 
-** Release 0.2
+The login will be done using an openid. The userid will be validated against 
+the datbase and only predefined set of users can login and logout. The database 
+will be mongo db and Apache the web server. The database can be backed up and restored
+by the DBA.
+
+The DBA creates the users from the back end.
+ 
+** Release 0.2 
+The DBA creates an admin user who can add, update or delete other users.
+
+** Release 0.3
 
 This release will have a facility to upload documents, search
 documents, and tag documents.
