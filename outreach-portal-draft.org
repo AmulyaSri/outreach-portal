@@ -63,7 +63,7 @@ The DBA can backup and restore the database at any point of time.
  backed up and also restored.  
 
 The login will be done using an openid. The userid will be validated against 
-the datbase and only predefined set of users can login and logout. The database 
+the database and only predefined set of users can login and logout. The database 
 will be mongo db and Apache the web server. The database can be backed up and restored
 by the DBA.
 
@@ -82,11 +82,35 @@ documents, and tag documents.
 ...
 
 * Design
+Release 0.1:
+------------
+Authentication of email id is done using Mozilla Persona. Mozilla Persona does authentication of open ids.
+Authorization will be done on the emailid by checking against the mongo database.
 
+The collections used in the mongo db are:
+users (email)
+
+The users of the system are
++Outreach team
++Nodal co-ordinators
++Admin
+
+The 2 states of the users are: user-ready, user-logged-in
+
+The user moves from user-ready to user-logged-in state upon login.
+The user moves from user-logged-in state to user-ready state upon logout. 
 ...
 * Test Cases
+Release 0.1:
+------------
+Login with a valid openid email which is authorized to use the system.
+Expected result: Login is succcessful.
 
-...
+Login with a valid openid email which is not authorized to use the system.
+Expected result: Login unsuccessful.
+
+Login with an invalid openid email.
+Expectedd result: Login unsuccessful.
 * Toy Model 
 
 This toy model is a small web application which can be used to upload
