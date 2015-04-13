@@ -70,7 +70,9 @@ by the DBA.
 The DBA creates the users from the back end.
  
 ** Release 0.2 
-The DBA creates an admin user who can add, update or delete other users.
+The DBA creates an admin user in the database. admin logs in using his
+credentials, login credentials get validated in the database and admin logs in.
+The admin user upon login can add, update or delete other users.
 
 ** Release 0.3
 
