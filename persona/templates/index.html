@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}Welcome{% endblock %}
+{% block body %}
+  <h2>Welcome</h2>
+  <p>
+   The Outreach portal is the single point of contact for the feedback, resource management related to outreach activities.
+   
+  <p>
+   Outreach portal allows to upload and download documents related to outreach activities.
+  {% if g.user %}
+  <p>
+    You are now logged in as <strong>{{ g.user }}</strong>
+  {% else %}
+  <p>
+    To sign in click the sign in button above.
+  {% endif %}
+{% endblock %}
